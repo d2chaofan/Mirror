@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 摄像头预览视图 -->
+    <androidx.camera.view.PreviewView
+        android:id="@+id/previewView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- 浮动操作按钮组 (FOV) -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:orientation="vertical">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnZoomIn"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:text="+"
+            android:textSize="24sp"
+            app:iconGravity="textStart"
+            android:contentDescription="放大" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnZoomOut"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginTop="8dp"
+            android:text="-"
+            android:textSize="24sp"
+            app:iconGravity="textStart"
+            android:contentDescription="缩小" />
+
+    </LinearLayout>
+
+</FrameLayout>
